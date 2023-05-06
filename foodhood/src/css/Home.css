@@ -1,3 +1,19 @@
+/******************************titlecss*******************************/
+
+.foodhublogo{
+    height: 80px;
+    width: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* .headertitle1{
+    color: green;
+} */
+/* .headertitle2{
+    color: white;
+} */
+/******************************backgroundcss*******************************/
 .home{background-color: rgb(51, 51, 51);
     height: 90vh;
     width: 100%;
@@ -5,6 +21,7 @@
     display:flex;
     justify-content: center;
 }
+/******************************notificationscss*******************************/
 .notifications{
     height: 95%;
     width: 20vw;
@@ -68,7 +85,7 @@
     background-color: rgb(21, 0, 255);
     justify-content: center;
     margin: 15px;
-    overflow-y: scroll;
+    
 }
 .search{
     height: 50px;
@@ -76,20 +93,34 @@
     background-color: forestgreen;
 }
 .feedpostcontainer{display:grid;
-    height: 600px;
+    /* height: 100%; */
     width:  700px;
     background-color: rgb(255, 0, 183);
     justify-content: center;
+    overflow-y: scroll;
 }
-.postpicture{
-    height: 520px;
-    width: 675px;
+.postpicture{display:grid;
+    height: 550px;
+    width: 670px;
     background-color: lightgreen;
+    justify-content: center;   
 }
-.postinteractions{
+.postpictureimage{
+    height: 510px;
+    width: 670px;
+} 
+.postcaption{display:grid;
+    height: 50;
+    width: 670;
+    background-color: lightsalmon;
+    justify-content: left;
+}
+.postinteractions{display:flex;
     height: 50px;
     width:  100%;
     background-color: teal;
+    justify-content: left;
+    flex-direction: row;
 }
 .likebutton{
     height: 45px;
@@ -102,4 +133,53 @@
     width: 45px;
     font-size: 35px;
     background-color: indianred;
+}
+.comments{display: grid;
+    height: 100%;
+    width: 670px;
+    background-color: darkslateblue;
+    justify-content: left;
+    
+}
+.comment-button-wrapper{display: flex;
+    justify-content: space-between;
+    height: 30px;
+    width: 670px;
+    background-color: blue;
+}
+.comment-edit-button{
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+    background-color: rgb(255, 0, 208);
+}
+.comment-delete-button{
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+    background-color: rgb(255, 0, 208);
+}
+.main-container{display: flex;
+    height: 30px;
+    background-color: gold;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+.comment-flexbox{display: flex;
+    justify-content: space-between;
+}
+.inputbox{display: flex;
+    align-items: left;
+    height: 20px;
+    width: 600px;
+}
+.post-comment-button{
+    height: 20px;
+    width: 50px;
+    background-color: aqua;
+    font-size: small;
+    border-radius: 5px;
+    border-style: none;
+    cursor: pointer;
 }

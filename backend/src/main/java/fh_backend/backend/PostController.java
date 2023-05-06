@@ -14,7 +14,7 @@ public class PostController {
     @Autowired
     private PostRepository postReposotory;
     @GetMapping("/")
-    public List <post> getPosts(){
+    public List<post> getPosts(){
         return postReposotory.findAll();
     }
     @GetMapping("/{id}")
