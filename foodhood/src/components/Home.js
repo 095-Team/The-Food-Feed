@@ -71,21 +71,28 @@ function Home() {
     <div className='home'>
       <div className='profilesection'>
         <div className='dp'></div>
-        <div className='profiledetails'>
+        <div className='profilename'>
           Luke Skywalker
         </div>
+        <div className='profilebio'>
+        Luke Skywalker was a Tatooine farmboy who rose from humble 
+        beginnings to become one of the greatest Jedi the galaxy has ever known. 
+        </div>
         <div className='profilesectionbuttons'>
+          <button className='profilecreatepostbutton'>Create Post</button>
           <button className='profilesettingsbutton'>Settings</button>
           <button className='profilesignoutbutton'>Sign Out</button>
-          <button className='profilecreatepostbutton'>Create Post</button>
         </div>
       </div>
       <div className='feed'>
         <div className='search'>Search
         </div>
         <div className='feedpostcontainer'>
-          If you can read this, you can read.
-          
+           <div className='postuserinfo'>
+              <div className='postdp'></div>
+              < div className='postuser'>Padme Amidala
+              </div>
+            </div> 
            { listOfPosts.map((food,id)=>{
             return <div key={food.id} className='postpicture'>
                <img className="postpictureimage" src={food.picture} alt="blah"/>
