@@ -96,7 +96,6 @@
     border-style: none;
     border-radius: 10px;
 }
-
 /* ****************************feedcss*******************************/
 .feed{display:grid;
     height: 95%;
@@ -107,10 +106,16 @@
     border-radius: 15px;
     border-style: none;
 }
-.search{
-    height: 50px;
-    width: 700px;
-    background-color: forestgreen;
+.search{display: grid;
+    justify-content: center;
+    height: 30px;
+    width: 670px;
+    border-color: #adff2f;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    border-style: double;
+    border-width: 5px;
 }
 .feedpostcontainer{display:grid;
     /* height: 100%; */
@@ -119,6 +124,26 @@
     justify-content: center;
     overflow-y: scroll;
 }
+
+.feedpostcontainer {
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+  
+.feedpostcontainer::-webkit-scrollbar {
+    width: 5px;
+}
+  
+.feedpostcontainer::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+  
+.feedpostcontainer::-webkit-scrollbar-track {
+   background-color: transparent;
+}
+
+
 .postuserinfo{display: flex;
     justify-content: center;
     height: 40px;
@@ -155,7 +180,7 @@
     justify-content: left;
 }
 .postinteractions{display:flex;
-    height: 50px;
+    height: 45px;
     width:  100%;
     background-color: #171717;
     justify-content: left;
@@ -229,6 +254,7 @@
 }
 .comment-flexbox{display: flex;
     justify-content: space-between;
+    margin-top: 5px;
 }
 .inputbox{display: flex;
     align-items: left;

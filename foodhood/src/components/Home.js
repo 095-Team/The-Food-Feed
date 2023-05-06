@@ -85,7 +85,7 @@ function Home() {
         </div>
       </div>
       <div className='feed'>
-        <div className='search'>Search
+        <div className='search'>Looking for something...?
         </div>
         <div className='feedpostcontainer'>
            <div className='postuserinfo'>
