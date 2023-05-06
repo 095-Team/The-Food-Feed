@@ -3,8 +3,7 @@
 .foodhublogo{
     height: 80px;
     width: 150px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 10px;
 }
 
 /* .headertitle1{
@@ -25,19 +24,23 @@
 .notifications{
     height: 95%;
     width: 20vw;
-    background-color: aquamarine;
+    background-color: #171717;
     margin: 15px;
+    border-radius: 15px;
+    border-style: none;
 }
 
 /******************************profilecss*******************************/
 .profilesection{
     height: 95%;
     width: 20vw;
-    background-color: brown;
+    background-color: #171717;
     margin: 15px;
     display:grid;
     /* flex-direction: column; */
     justify-content: center;
+    border-radius: 15px;
+    border-style: none;
 }
 
 .dp{
@@ -82,10 +85,11 @@
 .feed{display:grid;
     height: 95%;
     width: 50vw;
-    background-color: rgb(21, 0, 255);
+    background-color: #171717;
     justify-content: center;
     margin: 15px;
-    
+    border-radius: 15px;
+    border-style: none;
 }
 .search{
     height: 50px;
@@ -118,7 +122,7 @@
 .postinteractions{display:flex;
     height: 50px;
     width:  100%;
-    background-color: teal;
+    background-color: #171717;
     justify-content: left;
     flex-direction: row;
 }
@@ -137,27 +141,40 @@
 .comments{display: grid;
     height: 100%;
     width: 670px;
-    background-color: darkslateblue;
+    background-color:#171717;
     justify-content: left;
     
 }
 .comment-button-wrapper{display: flex;
     justify-content: space-between;
     height: 30px;
-    width: 670px;
-    background-color: blue;
+    width: 660px;
+    background-color: #333333;
+    border-radius: 5px;
+    border-style: none;
+    padding-left: 5px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    margin: 2px;
 }
 .comment-edit-button{
     height: 30px;
     width: 30px;
     font-size: 15px;
-    background-color: rgb(255, 0, 208);
+    color: #adff2f;
+    background: none;
+    border-style: none;
+    cursor: pointer;
 }
 .comment-delete-button{
     height: 30px;
     width: 30px;
     font-size: 15px;
-    background-color: rgb(255, 0, 208);
+    color: #adff2f;
+    background: none;
+    border-style: none;
+    cursor: pointer;
+    margin-right: 15px;
 }
 .main-container{display: flex;
     height: 30px;
