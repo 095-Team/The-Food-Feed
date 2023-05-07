@@ -3,6 +3,7 @@ import "../css/Home.css"
 import * as IoIcons5 from "react-icons/io5";
 import Axios from "axios"
 import {useEffect,useState} from "react"
+import { Link } from 'react-router-dom';
 
 function Home() {
   const [listOfPosts, setListOfPosts] = useState([]);
@@ -66,6 +67,42 @@ function Home() {
       });
   };
 
+  //Deleting posts
+  const deletePost = (id) => {
+    console.log(id, 'delete');
+    Axios.delete(`http://localhost:8080/${id}`)
+      .then((response) => {
+        alert('deleted');
+      })
+      .catch((e) => {
+        console.error(e);
+      });
+  };
+//Editing posts
+const editPost = (event, id, comment) => {
+  event.preventDefault();
+  const updatedPicture = prompt("Edit post", comment.picture);
+  const updatedCaption = prompt("Edit post", comment.caption);
+  Axios.put(`http://localhost:8080/${id}`, {
+    picture: updatedPicture,
+    caption: updatedCaption,
+    id: id,
+  })
+    .then((response) => {
+      alert('updated');
+      setListOfPosts(
+        listOfPosts.map((post) =>
+          post.id === id ? { ...post, picture: updatedPicture, caption: updatedCaption } : post
+        )
+      );
+    })
+    .catch((e) => {
+      console.error(e);
+    });
+};
+
+
+
   return (
     //Leftside Profile Section
     <div className='home'>
@@ -79,7 +116,7 @@ function Home() {
         beginnings to become one of the greatest Jedi the galaxy has ever known. 
         </div>
         <div className='profilesectionbuttons'>
-          <button className='profilecreatepostbutton'>Create Post</button>
+          <button className='profilecreatepostbutton'><Link to="/addpost">Create Post</Link></button>
           <button className='profilesettingsbutton'>Settings</button>
           <button className='profilesignoutbutton'>Sign Out</button>
         </div>
@@ -98,7 +135,12 @@ function Home() {
                <img className="postpictureimage" src={food.picture} alt="blah"/>
                     <div className="postcaption">
                       {food.caption}
+                      <button className='comment-edit-button' onClick={(event)=>{editPost(event, food.id, food.picture, food.caption)}}><IoIcons5.IoPencilSharp/></button>
+                      <button className='comment-delete-button' onClick={()=>deletePost(food.id)}><IoIcons5.IoTrashOutline/>hello</button> 
+                      
                     </div>
+                    
+                        
                   </div>
             })}
         
@@ -112,8 +154,8 @@ function Home() {
               return <div key={content.id} className='comments'>
                     <div className="comment-button-wrapper">{content.comment}
                       <div> 
-                        <button className='comment-edit-button' onClick={(event)=>{editcomment(event, content.id, content.comment)}}><IoIcons5.IoPencilSharp/></button>
-                        <button className='comment-delete-button' onClick={()=>deleteComment(content.id)}><IoIcons5.IoTrashOutline/></button> 
+                        <button onClick={(event)=>{editcomment(event, content.id, content.comment)}}><IoIcons5.IoPencilSharp/></button>
+                        <button  onClick={()=>deleteComment(content.id)}><IoIcons5.IoTrashOutline/></button> 
                       </div>
                     </div>
                 </div>

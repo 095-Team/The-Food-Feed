@@ -1,0 +1,11 @@
+
+.postForm{
+    width: 100vw;
+    display: grid ;
+    justify-content: center;
+}
+.postinsertform{
+    height: 50px;
+    width: 400px;
+    background-color: brown;
+}
