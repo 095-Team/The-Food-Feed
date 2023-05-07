@@ -13,7 +13,7 @@
     color: white;
 } */
 /******************************backgroundcss*******************************/
-.home{background-color: rgb(51, 51, 51);
+.home{background-color: #333333;
     height: 90vh;
     width: 100%;
     color:white;
@@ -109,13 +109,14 @@
 .search{display: grid;
     justify-content: center;
     height: 30px;
-    width: 670px;
+    width: 45vw;
     border-color: #adff2f;
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 15px;
     border-style: double;
     border-width: 5px;
+    padding-left: 15px;
 }
 .feedpostcontainer{display:grid;
     /* height: 100%; */

@@ -20,9 +20,10 @@
   display: flex;
   /* flex-direction: column; */
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: rgb(249, 247, 246);
+  padding-left: 10px;
 }
 
 .App-link {
@@ -41,24 +42,26 @@
 /* .footer{background-color: rgb(255, 157, 0);
 width: 100%;
 height: 10vh;} */
-.headertitle2{color:rgb(255, 157, 0);}
+/* .headertitle2{color:rgb(255, 157, 0);} */
 
 .headerbuttons{
-  /* background-color: white; */
   height:50px;
   width: 100px;
   text-decoration: none;
   color: #adff2f;
   cursor: pointer;
-  border: 1px solid  #adff2f;
-  border-radius: 100%
-  ;
-
+  font-size: 20pt;
+  padding-top: 15px;
+}
+/* .profilelinktext{
+  color: white;
+  font-size: 14pt;
+} */
+.profile-link {
+  display: inline-block;
+  transition: transform 0.3s;
 }
 
-.headerbuttons:hover{
-  background-color: #adff2f;
-  color:white;
-  cursor: pointer;
-
+.headerbuttons:hover .profile-link {
+  transform: scale(1.3);
 }
