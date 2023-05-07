@@ -5,7 +5,7 @@
     justify-content:left;
     flex-direction: column;
     align-items: left;
-    background: url("https://cdn.wallpapersafari.com/94/6/518Ovm.jpg")
+    background: url("https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2018/12/vegetables.jpg")
 }
 
 .login_form{
@@ -26,7 +26,7 @@
     padding-inline-start: 10px;
 }
 .login_oauth{
-    background-color: brown;
+    background-color: #adff2f;
     height: 200px;
     width: 100%;
     justify-content: center;
@@ -43,10 +43,10 @@
 .login_button{ 
     height: 50px;
     width:100%;
-    border: 0 #601b1b;
+    border: 0 #adff2f;
     border-radius:10px ;
-    color: aliceblue;
-    background-color:#601b1b ;;
+    color: rgb(0, 0, 0);
+    background-color:#adff2f ;;
 }
 
 .login_button:hover{
@@ -54,16 +54,17 @@
     border: 0 aliceblue;
     border-radius:10px ;
     color:aliceblue;
-    background-color:rgb(164, 49, 49)
+    background-color:chartreuse
 }
 
 .fgtpwdlink{
-    color:white;
-    background-color: #601b1b;
+    color:rgb(0, 0, 0);
+    background-color: #adff2f;
     border-radius: 10px;
     text-decoration: none;
+    font-size: 10pt;
 }
 .fgtpwdlink:hover{
-    background-color: rgb(164, 49, 49);
+    background-color:chartreuse
 }
 
